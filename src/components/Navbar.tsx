@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
         scrolled 
-          ? 'shadow-lg py-2' 
-          : 'py-4'
+          ? 'shadow-lg py-1' 
+          : 'py-2'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,10 +49,10 @@ const Navbar: React.FC = () => {
             <NavLink onClick={() => handleNavClick('calculator')}>Calculator</NavLink>
             <button 
               onClick={() => handleNavClick('contact')}
-              className="ml-4 bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center"
+              className="ml-4 bg-green-600 hover:bg-green-700 text-white py-1.5 px-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center text-sm"
             >
               Contact Us
-              <ChevronDown className="ml-1 h-4 w-4" />
+              <ChevronDown className="ml-1 h-3 w-3" />
             </button>
           </nav>
           
@@ -61,15 +61,15 @@ const Navbar: React.FC = () => {
             className="lg:hidden text-gray-800 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white py-4 px-4 shadow-lg absolute w-full">
-          <nav className="flex flex-col space-y-3">
+        <div className="lg:hidden bg-white py-3 px-4 shadow-lg absolute w-full">
+          <nav className="flex flex-col space-y-2">
             <MobileNavLink onClick={() => handleNavClick('about')}>About</MobileNavLink>
             <MobileNavLink onClick={() => handleNavClick('services')}>Services</MobileNavLink>
             <MobileNavLink onClick={() => handleNavClick('benefits')}>Benefits</MobileNavLink>
@@ -77,10 +77,10 @@ const Navbar: React.FC = () => {
             <MobileNavLink onClick={() => handleNavClick('calculator')}>Calculator</MobileNavLink>
             <button 
               onClick={() => handleNavClick('contact')}
-              className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-full transition-all flex justify-center items-center mt-2"
+              className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full transition-all flex justify-center items-center mt-2 text-sm"
             >
               Contact Us
-              <ChevronDown className="ml-1 h-4 w-4" />
+              <ChevronDown className="ml-1 h-3 w-3" />
             </button>
           </nav>
         </div>
@@ -98,7 +98,7 @@ const NavLink: React.FC<NavLinkProps> = ({ onClick, children }) => {
   return (
     <button 
       onClick={onClick}
-      className="px-4 py-2 font-medium hover:text-green-600 transition-colors duration-300 relative group"
+      className="px-3 py-1.5 font-medium hover:text-green-600 transition-colors duration-300 relative group text-sm"
     >
       {children}
       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
@@ -110,7 +110,7 @@ const MobileNavLink: React.FC<NavLinkProps> = ({ onClick, children }) => {
   return (
     <button 
       onClick={onClick}
-      className="w-full text-left font-medium py-2 px-4 hover:bg-green-50 hover:text-green-600 rounded-lg transition-colors duration-300"
+      className="w-full text-left font-medium py-1.5 px-3 hover:bg-green-50 hover:text-green-600 rounded-lg transition-colors duration-300 text-sm"
     >
       {children}
     </button>
