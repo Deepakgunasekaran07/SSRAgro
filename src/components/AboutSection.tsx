@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
               <div className="absolute inset-0 bg-green-600 rounded-lg transform rotate-3 transition-transform group-hover:rotate-6"></div>
               <div className="relative rounded-lg overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105">
                 <img 
-                  src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                  src="https://i.ibb.co/L4P0K0N/RASAA-3918.jpg" 
                   alt="Solar panels in a farm field" 
                   className="w-full h-[400px] object-cover"
                 />
