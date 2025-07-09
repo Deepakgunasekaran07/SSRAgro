@@ -51,8 +51,8 @@ const HeroSection: React.FC = () => {
           backgroundAttachment: 'scroll',
         }}
       >
-        {/* Blurred dark overlay */}
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] z-0" />
+        {/* Black overlay for text clarity */}
+        <div className="absolute inset-0 bg-black/50 z-0" />
 
         {/* Solar Text Centered */}
         <div className="relative z-10 text-center px-4">
@@ -112,8 +112,11 @@ const HeroSection: React.FC = () => {
           <h3 className="text-2xl sm:text-3xl font-semibold text-[#0635a0] mb-4">
             About SSR Agro Energy
           </h3>
-          <p className="text-gray-700 text-base sm:text-lg mb-6">
-            Pioneering sustainable solar solutions to empower agriculture since 2015.
+          <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
+            
+          We present our purpose, achievements, and values in a clear and interactive way.
+Through animated stats, tabbed content, and impactful imagery, we showcase our credibility and experience.
+Visitors can quickly understand our mission, long-term vision, and key accomplishments — building trust and connecting them to our story and impact.
           </p>
           <button
             onClick={() => navigate('/about')}
