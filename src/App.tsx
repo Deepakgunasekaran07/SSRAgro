@@ -1,14 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
-import BenefitsSection from './components/BenefitsSection';
+import EnergySection from './components/EnergySection';
 import ProjectsSection from './components/ProjectsSection';
-import TestimonialsSection from './components/TestimonialsSection';
 import CalculatorSection from './components/CalculatorSection';
-import CtaSection from './components/CtaSection';
+import ContactSection from './components/CtaSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,14 +16,14 @@ function App() {
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-800">
         <Navbar />
         <main>
-          <HeroSection />
-          <AboutSection />
-          <ServicesSection />
-          <BenefitsSection />
-          <ProjectsSection />
-          <TestimonialsSection />
-          <CalculatorSection />
-          <CtaSection />
+          <Routes>
+            <Route path="/" element={<HeroSection />} />
+            <Route path="/about" element={<AboutSection />} />
+            <Route path="/energy" element={<EnergySection />} />
+            <Route path="/projects" element={<ProjectsSection />} />
+            <Route path="/calculator" element={<CalculatorSection />} />
+            <Route path="/contact" element={<ContactSection />} />
+          </Routes>
         </main>
         <Footer />
       </div>

@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                 />
                 <button 
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-r-lg transition-colors duration-300"
+                  className="bg-[#0635a0] hover:bg-[#FFFFF] text-white px-4 py-3 rounded-r-lg transition-colors duration-300"
                 >
                   <ChevronRight size={20} />
                 </button>
@@ -118,7 +118,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, children }) => {
     <li>
       <a 
         href={href} 
-        className="text-gray-400 hover:text-green-400 transition-colors duration-300 flex items-center"
+        className="text-gray-400 hover:text-[#0635a0] transition-colors duration-300 flex items-center"
       >
         <ChevronRight size={16} className="mr-2" />
         {children}

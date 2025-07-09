@@ -13,8 +13,8 @@ const Logo: React.FC = () => {
         </div>
       </div>
       <div className="font-bold text-xl">
-        <span className="text-gray-800">SSR</span>
-        <span className="block text-sm text-green-600 -mt-1">Agro Energy</span>
+        <span className="text-[#FFFFF]">SSR</span>
+        <span className="block text-sm text-[#FFFFF] -mt-1">Agro Energy</span>
       </div>
     </div>
   );

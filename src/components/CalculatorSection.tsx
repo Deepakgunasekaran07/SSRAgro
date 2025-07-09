@@ -59,17 +59,17 @@ const CalculatorSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Solar <span className="text-green-600">Savings Calculator</span>
+            Solar <span className="text-[#0635a0]">Savings Calculator</span>
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6"></div>
+          <p className="text-xl text-[#0635a0] max-w-3xl mx-auto">
             Estimate your potential savings with our solar energy solutions.
           </p>
         </div>
         
         <div className="max-w-6xl mx-auto bg-gray-50 rounded-xl shadow-lg overflow-hidden">
           <div className="md:flex">
-            <div className="md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-green-600 to-green-800 text-white">
+            <div className="md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-[#00c5ff] to-[#0635a0] text-white">
               <div className="flex items-center mb-8">
                 <div className="bg-white/20 rounded-full p-3 mr-4">
                   <Calculator className="h-8 w-8" />
@@ -138,7 +138,7 @@ const CalculatorSection: React.FC = () => {
               
               <button 
                 onClick={calculateSavings}
-                className="mt-8 bg-white text-green-700 hover:bg-green-100 px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full"
+                className="mt-8 bg-white text-[#0635a0] hover:[#1e3ecb] px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full"
               >
                 Calculate Savings
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -155,26 +155,26 @@ const CalculatorSection: React.FC = () => {
                   
                   <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <h4 className="text-lg font-semibold text-gray-700 mb-2">Recommended System Size</h4>
-                    <p className="text-3xl font-bold text-green-600">{systemSize} kW</p>
+                    <p className="text-3xl font-bold text-[#0635a0]">{systemSize} kW</p>
                     <p className="text-sm text-gray-500 mt-1">Based on your daily usage</p>
                   </div>
                   
                   <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <h4 className="text-lg font-semibold text-gray-700 mb-2">Annual Savings</h4>
-                    <p className="text-3xl font-bold text-green-600">₹{savings.toLocaleString()}</p>
+                    <p className="text-3xl font-bold text-[#0635a0]">₹{savings.toLocaleString()}</p>
                     <p className="text-sm text-gray-500 mt-1">Approximately 35% reduction in energy costs</p>
                   </div>
                   
                   <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <h4 className="text-lg font-semibold text-gray-700 mb-2">Estimated ROI Period</h4>
-                    <p className="text-3xl font-bold text-green-600">{roi} years</p>
+                    <p className="text-3xl font-bold text-[#0635a0]">{roi} years</p>
                     <p className="text-sm text-gray-500 mt-1">Payback period for your investment</p>
                   </div>
                   
                   <div className="mt-8">
                     <a 
                       href="#contact" 
-                      className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                      className="bg-[#1e3ecb] hover:bg-[#0635a0] text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                     >
                       Get a Detailed Quote
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -184,8 +184,8 @@ const CalculatorSection: React.FC = () => {
               ) : (
                 <div className="text-center p-8 animate-fade-in">
                   <div className="mb-8 flex justify-center">
-                    <div className="bg-green-100 rounded-full p-6">
-                      <Sun className="h-16 w-16 text-green-600 animate-pulse" />
+                    <div className="bg-blue-100 rounded-full p-6">
+                      <Sun className="h-16 w-16 text-[#0635a0] animate-pulse" />
                     </div>
                   </div>
                   <h3 className="text-3xl font-bold text-gray-800 mb-4">
@@ -196,15 +196,15 @@ const CalculatorSection: React.FC = () => {
                   </p>
                   <div className="space-y-4 text-lg text-gray-700">
                     <p className="flex items-center justify-center">
-                      <span className="w-3 h-3 bg-green-600 rounded-full mr-2"></span>
+                      <span className="w-3 h-3 bg-[#0635a0] rounded-full mr-2"></span>
                       Reduce operational costs
                     </p>
                     <p className="flex items-center justify-center">
-                      <span className="w-3 h-3 bg-green-600 rounded-full mr-2"></span>
+                      <span className="w-3 h-3 bg-[#0635a0] rounded-full mr-2"></span>
                       Increase farm efficiency
                     </p>
                     <p className="flex items-center justify-center">
-                      <span className="w-3 h-3 bg-green-600 rounded-full mr-2"></span>
+                      <span className="w-3 h-3 bg-[#0635a0] rounded-full mr-2"></span>
                       Sustainable farming future
                     </p>
                   </div>

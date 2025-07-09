@@ -28,7 +28,6 @@ const CtaSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
     if (formRef.current) {
       formRef.current.reset();
       alert("Thank you for your inquiry! Our team will contact you shortly.");
@@ -39,14 +38,14 @@ const CtaSection: React.FC = () => {
     <section 
       id="contact" 
       ref={sectionRef}
-      className="py-24 bg-gradient-to-b from-green-50 to-white opacity-0 transition-opacity duration-1000"
+      className="py-24 bg-gradient-to-b from-blue-50 to-white opacity-0 transition-opacity duration-1000"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="text-green-600">Touch</span>
+            Get In <span className="text-[#0635a0]">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to start your solar journey? Contact us for a free consultation and quote.
           </p>
@@ -59,7 +58,7 @@ const CtaSection: React.FC = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-3 mr-4 text-green-600">
+                  <div className="bg-[#0635a0]/10 rounded-full p-3 mr-4 text-[#0635a0]">
                     <Phone className="h-6 w-6" />
                   </div>
                   <div>
@@ -70,7 +69,7 @@ const CtaSection: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-3 mr-4 text-green-600">
+                  <div className="bg-[#0635a0]/10 rounded-full p-3 mr-4 text-[#0635a0]">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
@@ -81,7 +80,7 @@ const CtaSection: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-3 mr-4 text-green-600">
+                  <div className="bg-[#0635a0]/10 rounded-full p-3 mr-4 text-[#0635a0]">
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
@@ -131,7 +130,7 @@ const CtaSection: React.FC = () => {
                       id="name" 
                       name="name" 
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0635a0] focus:border-transparent transition-all duration-300"
                       placeholder="John Doe"
                     />
                   </div>
@@ -145,7 +144,7 @@ const CtaSection: React.FC = () => {
                       id="email" 
                       name="email" 
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0635a0] focus:border-transparent transition-all duration-300"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -159,7 +158,7 @@ const CtaSection: React.FC = () => {
                     type="tel" 
                     id="phone" 
                     name="phone" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0635a0] focus:border-transparent transition-all duration-300"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -173,7 +172,7 @@ const CtaSection: React.FC = () => {
                     id="subject" 
                     name="subject" 
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0635a0] focus:border-transparent transition-all duration-300"
                     placeholder="Solar Installation Inquiry"
                   />
                 </div>
@@ -187,14 +186,14 @@ const CtaSection: React.FC = () => {
                     name="message" 
                     rows={5}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0635a0] focus:border-transparent transition-all duration-300"
                     placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
                 
                 <button 
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full md:w-auto"
+                  className="bg-[#0635a0] hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full md:w-auto"
                 >
                   Send Message
                   <Send className="ml-2 h-5 w-5" />
@@ -204,13 +203,13 @@ const CtaSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-24 max-w-4xl mx-auto bg-green-600 rounded-xl overflow-hidden shadow-xl">
+        <div className="mt-24 max-w-4xl mx-auto bg-[#0635a0] rounded-xl overflow-hidden shadow-xl">
           <div className="p-8 md:p-12 text-center text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to harness the power of the sun?</h3>
-            <p className="text-lg text-green-100 mb-8">
+            <p className="text-lg text-blue-100 mb-8">
               Schedule a free consultation with our solar experts and start your journey towards energy independence.
             </p>
-            <button className="bg-white text-green-700 hover:bg-green-50 px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+            <button className="bg-white text-[#0635a0] hover:bg-[#00cdff] px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 inline-flex items-center">
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>

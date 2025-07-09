@@ -1,96 +1,96 @@
-import React, { useEffect, useRef } from 'react';
-import { SunMedium, Gauge, Wrench, LineChart } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { TreePine, Factory, Leaf } from 'lucide-react';
 
-interface ServiceCardProps {
+interface StatItemProps {
   icon: React.ReactNode;
-  title: string;
-  description: string;
-  delay: number;
+  label: string;
+  target: number;
+  suffix?: string;
+  duration?: number;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, delay }) => {
-  return (
-    <div 
-      className="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1 opacity-0 animate-fade-in"
-      style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
-    >
-      <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-green-600">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-};
-
-const ServicesSection: React.FC = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+const StatItem: React.FC<StatItemProps> = ({ icon, label, target, suffix = '', duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (ref.current) observer.observe(ref.current);
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (ref.current) observer.unobserve(ref.current);
     };
-  }, []);
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!hasAnimated) return;
+    let start: number | null = null;
+
+    const animate = (timestamp: number) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      setCount(Math.floor(progress * target));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+  }, [hasAnimated, target, duration]);
 
   return (
-    <section 
-      id="services" 
-      ref={sectionRef}
-      className="py-24 bg-gray-50"
+    <div
+      ref={ref}
+      className="flex flex-col items-center text-center bg-white border border-[#0635a0]/10 p-6 rounded-xl shadow-md transform transition hover:scale-105"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#0635a0]/10 text-[#0635a0] w-16 h-16 flex items-center justify-center rounded-full mb-4">
+        {icon}
+      </div>
+      <div className="text-4xl font-bold text-[#0635a0]">
+        {count}{suffix}
+      </div>
+      <p className="text-gray-700 mt-2">{label}</p>
+    </div>
+  );
+};
+
+const ImpactStats: React.FC = () => {
+  return (
+    <section id="impact" className="py-24 bg-white">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-green-600">Services</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0635a0] mb-4">
+           Total energy produced 
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive solar energy solutions designed specifically for agricultural applications.
+          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6 rounded"></div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Every unit of solar power we’ve generated means cleaner air, fewer emissions, and a greener planet. See how far we’ve come.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <ServiceCard 
-            icon={<SunMedium size={32} />}
-            title="Solar Installations"
-            description="Custom designed solar panel installations for farms, warehouses, and agricultural facilities."
-            delay={100}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <StatItem
+            icon={<Leaf size={36} />}
+            label="Total Energy Produced"
+            target={85000}
+            suffix=" kWh"
           />
-          
-          <ServiceCard 
-            icon={<Gauge size={32} />}
-            title="Energy Audits"
-            description="Comprehensive analysis of your current energy usage to identify opportunities for optimization."
-            delay={300}
+          <StatItem
+            icon={<Factory size={36} />}
+            label="CO₂ Emissions Avoided"
+            target={25000}
+            suffix=" kg"
           />
-          
-          <ServiceCard 
-            icon={<Wrench size={32} />}
-            title="Maintenance & Support"
-            description="Ongoing maintenance, monitoring, and support services to ensure optimal system performance."
-            delay={500}
-          />
-          
-          <ServiceCard 
-            icon={<LineChart size={32} />}
-            title="Efficiency Consulting"
-            description="Expert advice on maximizing energy efficiency across your agricultural operations."
-            delay={700}
+          <StatItem
+            icon={<TreePine size={36} />}
+            label="Trees Planted Equivalent"
+            target={12000}
           />
         </div>
       </div>
@@ -98,4 +98,4 @@ const ServicesSection: React.FC = () => {
   );
 };
 
-export default ServicesSection;
+export default ImpactStats;

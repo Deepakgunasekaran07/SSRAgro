@@ -99,9 +99,9 @@ const TestimonialsSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our <span className="text-green-600">Clients Say</span>
+            What Our <span className="text-[#0635a0]">Clients Say</span>
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from farmers and agricultural businesses who have transformed their operations with our solar solutions.
           </p>
@@ -119,7 +119,7 @@ const TestimonialsSection: React.FC = () => {
                   <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                       <div className="flex-shrink-0">
-                        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-green-100">
+                        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-[#0635a0]">
                           <img 
                             src={testimonial.image} 
                             alt={testimonial.name} 
@@ -159,7 +159,7 @@ const TestimonialsSection: React.FC = () => {
           
           <button 
             onClick={prevSlide}
-            className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-green-600 p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none"
+            className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-[#0635a0] p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none"
             disabled={isAnimating}
           >
             <ArrowLeft size={20} />
@@ -167,7 +167,7 @@ const TestimonialsSection: React.FC = () => {
           
           <button 
             onClick={nextSlide}
-            className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-green-600 p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none"
+            className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-[#0635a0] p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none"
             disabled={isAnimating}
           >
             <ArrowRight size={20} />
@@ -180,7 +180,7 @@ const TestimonialsSection: React.FC = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${
-                currentSlide === index ? 'bg-green-600 w-8' : 'bg-gray-300'
+                currentSlide === index ? 'bg-[#0635a0] w-8' : 'bg-gray-300'
               }`}
             ></button>
           ))}

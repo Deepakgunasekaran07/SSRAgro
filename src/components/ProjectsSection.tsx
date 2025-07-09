@@ -53,14 +53,7 @@ const projects: Project[] = [
 const ProjectsSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
-  };
+  const scrollLockRef = useRef(false); // to prevent rapid scroll jumps
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -83,6 +76,37 @@ const ProjectsSection: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (scrollLockRef.current) return;
+
+      scrollLockRef.current = true;
+
+      if (e.deltaY > 0) {
+        // Scroll down
+        setCurrentSlide(prev => (prev === projects.length - 1 ? prev : prev + 1));
+      } else if (e.deltaY < 0) {
+        // Scroll up
+        setCurrentSlide(prev => (prev === 0 ? 0 : prev - 1));
+      }
+
+      setTimeout(() => {
+        scrollLockRef.current = false;
+      }, 800); // Delay between scrolls
+    };
+
+    const section = sectionRef.current;
+    if (section) {
+      section.addEventListener('wheel', handleWheel, { passive: false });
+    }
+
+    return () => {
+      if (section) {
+        section.removeEventListener('wheel', handleWheel);
+      }
+    };
+  }, []);
+
   return (
     <section 
       id="projects" 
@@ -92,9 +116,9 @@ const ProjectsSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-green-600">Projects</span>
+            Our <span className="text-[#0635a0]">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore some of our successful solar installations across India's agricultural sector.
           </p>
@@ -103,7 +127,7 @@ const ProjectsSection: React.FC = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-in-out" 
+              className="flex transition-transform duration-700 ease-in-out" 
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {projects.map((project) => (
@@ -119,7 +143,7 @@ const ProjectsSection: React.FC = () => {
                     
                     <div>
                       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-green-600 mb-4">{project.location}</p>
+                      <p className="text-[#0635a0] mb-4">{project.location}</p>
                       <p className="text-gray-700 mb-6">{project.description}</p>
                       
                       <div className="grid grid-cols-2 gap-4">
@@ -139,33 +163,12 @@ const ProjectsSection: React.FC = () => {
               ))}
             </div>
           </div>
-          
-          <button 
-            onClick={prevSlide}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 hover:bg-white text-green-600 p-3 rounded-full shadow-lg transition-all duration-300"
-          >
-            <ArrowLeft size={20} />
-          </button>
-          
-          <button 
-            onClick={nextSlide}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white text-green-600 p-3 rounded-full shadow-lg transition-all duration-300"
-          >
-            <ArrowRight size={20} />
-          </button>
+
+          {/* Optional: Remove buttons since scroll replaces them */}
+          {/* <button ... /> */}
         </div>
-        
-        <div className="flex justify-center mt-8">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${
-                currentSlide === index ? 'bg-green-600 w-8' : 'bg-gray-300'
-              }`}
-            ></button>
-          ))}
-        </div>
+
+        {/* Optional: Remove pagination dots too */}
       </div>
     </section>
   );
