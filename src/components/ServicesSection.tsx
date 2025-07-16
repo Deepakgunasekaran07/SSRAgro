@@ -47,29 +47,29 @@ const StatItem: React.FC<StatItemProps> = ({ icon, label, target, suffix = '', d
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center text-center bg-white border border-[#0635a0]/10 p-6 rounded-xl shadow-md transform transition hover:scale-105"
+      className="flex flex-col items-center text-center bg-white border border-green-300 p-6 rounded-xl shadow-md transform transition hover:scale-105"
     >
-      <div className="bg-[#0635a0]/10 text-[#0635a0] w-16 h-16 flex items-center justify-center rounded-full mb-4">
+      <div className="bg-green-300/20 text-[#0b2b26] w-16 h-16 flex items-center justify-center rounded-full mb-4">
         {icon}
       </div>
-      <div className="text-4xl font-bold text-[#0635a0]">
+      <div className="text-4xl font-bold text-[#0b2b26]">
         {count}{suffix}
       </div>
-      <p className="text-gray-700 mt-2">{label}</p>
+      <p className="text-green-700 mt-2 font-semibold">{label}</p>
     </div>
   );
 };
 
 const ImpactStats: React.FC = () => {
   return (
-    <section id="impact" className="py-24 bg-white">
+    <section id="impact" className="py-24 bg-gradient-to-b from-green-50 via-white to-green-100">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0635a0] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0b2b26]">
            Total energy produced 
           </h2>
-          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6 rounded"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0b2b26] to-green-300 mx-auto mb-6 rounded-full"></div>
+          <p className="text-xl text-[#0b2b26] max-w-2xl mx-auto">
             Every unit of solar power we’ve generated means cleaner air, fewer emissions, and a greener planet. See how far we’ve come.
           </p>
         </div>

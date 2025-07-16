@@ -100,75 +100,7 @@ const BenefitsSection: React.FC = () => {
   ];
 
   return (
-    <section
-      id="benefits"
-      ref={sectionRef}
-      className="py-24 relative"
-      style={{
-        backgroundImage: "url('https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/28/full/1724835314-5004.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      <div className="absolute inset-0 bg-gray-900/80 z-0"></div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Our <span className="text-[#FFFF]">Clean Energy</span> Commitment
-          </h2>
-          <div className="w-24 h-1 bg-[#022a85] mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Discover how solar energy is shaping a more sustainable, self-reliant future for Indian agriculture.
-          </p>
-        </div>
-
-        {/* Flip Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {benefitCards.map((item, idx) => (
-            <div
-              key={idx}
-              className="group [perspective:1000px]"
-            >
-              <div className="relative w-full h-80 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                {/* Front */}
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg p-6 flex flex-col items-center justify-center [backface-visibility:hidden]">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-[#0635a0]">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-center px-2">{item.title}</h3>
-                </div>
-                {/* Back */}
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg p-6 flex items-center justify-center text-sm text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  {item.desc}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Counter Section */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <Counter target={30} suffix="%" duration={2000} />
-            <p className="text-gray-200 mt-2">Average Energy Cost Reduction</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <Counter target={500} suffix="+" duration={2000} />
-            <p className="text-gray-200 mt-2">Successful Installations</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <Counter target={25} suffix="k" duration={2000} />
-            <p className="text-gray-200 mt-2">Tons of CO₂ Prevented</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <Counter target={7} suffix="" duration={2000} />
-            <p className="text-gray-200 mt-2">Years Average ROI Period</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <></>
   );
 };
 

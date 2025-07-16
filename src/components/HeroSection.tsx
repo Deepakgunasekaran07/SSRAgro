@@ -42,8 +42,9 @@ const HeroSection: React.FC = () => {
     <>
       {/* Hero Section */}
       <section
+        id="hero"
         ref={sectionRef}
-        className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
+        className="relative min-h-screen w-full overflow-hidden flex items-center justify-start bg-white"
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dlfitvhc0/image/upload/v1752042315/DSC_3980_kgeqog.jpg')`,
           backgroundSize: 'cover',
@@ -52,80 +53,53 @@ const HeroSection: React.FC = () => {
         }}
       >
         {/* Black overlay for text clarity */}
-        <div className="absolute inset-0 bg-black/50 z-0" />
+        <div className="absolute inset-0 bg-primary-green/70 z-0" />
 
         {/* Solar Text Centered */}
-        <div className="relative z-10 text-center px-4">
+        <div className="relative z-10 text-left px-8 md:px-12 lg:px-16">
           <h1
-            className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-tight leading-none transition-all duration-1000 ${
+            className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-primary-yellow tracking-tight leading-none transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
             <span className="relative inline-block group cursor-pointer">
-              Solar
+              SSR Agro Energy
               <div
-                className="absolute inset-0 text-yellow-400 blur-sm transition-opacity duration-1000"
+                className="absolute inset-0 text-accent-yellow blur-sm transition-opacity duration-1000"
                 style={{ opacity: 0.3 + solarIntensity / 300 }}
               >
-                Solar
+                SSR Agro Energy
               </div>
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-300"></div>
             </span>
             <span className="text-white/60 ml-1">®</span>
           </h1>
 
-          <h2 className="text-xl sm:text-2xl mt-6 text-white/80 font-light">
-            Sustainable Energy — Sustainable Future
+          <h2 className="text-xl sm:text-2xl mt-6 text-white font-light">
+            Energizing Progress with Clean, Reliable Power Since 2016.
           </h2>
 
-          {/* Learn More Button */}
-          <button
-            onClick={() => navigate('/about')}
-            className="inline-block bg-[#0635a0] hover:bg-[#022a85] text-white font-medium py-2 px-6 rounded-full transition duration-300 mt-8"
-          >
-            Learn More
-          </button>
         </div>
 
         {/* Live Solar Data Box */}
-        <div className="absolute bottom-3 left-4 md:left-6 z-20">
-          <div className="bg-black/20 backdrop-blur-sm rounded-full px-4 py-2 flex items-center space-x-3 border border-white/10">
+        <div className="absolute bottom-3 right-4 md:right-6 z-20">
+          <div className="bg-primary-green/80 backdrop-blur-sm rounded-full px-6 py-3 flex items-center space-x-4 border border-accent-yellow/30">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-[#0635a0] rounded-full animate-pulse" />
-              <span className="text-white/80 text-xs md:text-sm font-medium">Live Solar Data</span>
+              <div className="w-2 h-2 bg-accent-yellow rounded-full animate-pulse" />
+              <span className="text-white text-sm md:text-base font-medium">Live Solar Data</span>
             </div>
-            <div className="w-px h-4 bg-white/20" />
-            <div className="text-white/60 text-xs font-mono">
+            <div className="w-px h-4 bg-accent-yellow/30" />
+            <div className="text-accent-yellow text-sm font-mono">
               {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
             </div>
-            <div className="w-px h-4 bg-white/20" />
-            <div className="text-white text-xs font-mono">
+            <div className="w-px h-4 bg-accent-yellow/30" />
+            <div className="text-white text-sm font-mono">
               {Math.round(solarIntensity * 12.5)}kWh
             </div>
           </div>
         </div>
       </section>
       
-      {/* About Preview Below Hero */}
-      <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-semibold text-[#0635a0] mb-4">
-            About SSR Agro Energy
-          </h3>
-          <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
-            
-          We present our purpose, achievements, and values in a clear and interactive way.
-Through animated stats, tabbed content, and impactful imagery, we showcase our credibility and experience.
-Visitors can quickly understand our mission, long-term vision, and key accomplishments — building trust and connecting them to our story and impact.
-          </p>
-          <button
-            onClick={() => navigate('/about')}
-            className="inline-block bg-[#0635a0] hover:bg-[#022a85] text-white font-medium py-2 px-6 rounded-full transition duration-300"
-          >
-            Learn More
-          </button>
-        </div>
-      </div>
     </>
   );
 };

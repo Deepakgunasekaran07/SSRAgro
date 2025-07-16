@@ -111,15 +111,15 @@ const ProjectsSection: React.FC = () => {
     <section 
       id="projects" 
       ref={sectionRef}
-      className="py-24 bg-white opacity-0 transition-opacity duration-1000"
+      className="py-24 bg-gradient-to-b from-green-50 via-white to-green-100 opacity-0 transition-opacity duration-1000"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-[#0635a0]">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0b2b26]">
+            Our <span className="text-[#f0d003]">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-[#0635a0] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-[#f0d003] mx-auto mb-6"></div>
+          <p className="text-xl text-[#0b2b26] max-w-3xl mx-auto">
             Explore some of our successful solar installations across India's agricultural sector.
           </p>
         </div>
@@ -142,19 +142,18 @@ const ProjectsSection: React.FC = () => {
                     </div>
                     
                     <div>
-                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-[#0635a0] mb-4">{project.location}</p>
-                      <p className="text-gray-700 mb-6">{project.description}</p>
+                      <h3 className="text-2xl font-bold mb-2 text-[#0b2b26]">{project.title}</h3>
+                      <p className="text-green-700 mb-4 font-semibold">{project.location}</p>
+                      <p className="text-[#0b2b26] mb-6">{project.description}</p>
                       
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <p className="text-sm text-gray-500">Capacity</p>
-                          <p className="text-lg font-semibold">{project.capacity}</p>
+                        <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+                          <p className="text-sm text-green-700 font-semibold">Capacity</p>
+                          <p className="text-lg font-bold text-[#0b2b26]">{project.capacity}</p>
                         </div>
-                        
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <p className="text-sm text-gray-500">Completion</p>
-                          <p className="text-lg font-semibold">{project.completion}</p>
+                        <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+                          <p className="text-sm text-green-700 font-semibold">Completion</p>
+                          <p className="text-lg font-bold text-[#0b2b26]">{project.completion}</p>
                         </div>
                       </div>
                     </div>

@@ -9,6 +9,16 @@ import ProjectsSection from './components/ProjectsSection';
 import CalculatorSection from './components/CalculatorSection';
 import ContactSection from './components/CtaSection';
 import Footer from './components/Footer';
+import BenefitsSection from './components/BenefitsSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import ImpactStats from './components/ServicesSection';
+
+// Placeholder for Gallery/Facility page
+const GalleryPage = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <h1 className="text-4xl font-bold">Gallery / Facility Page (Coming Soon)</h1>
+  </div>
+);
 
 function App() {
   return (
@@ -17,12 +27,21 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/" element={<HeroSection />} />
-            <Route path="/about" element={<AboutSection />} />
-            <Route path="/energy" element={<EnergySection />} />
-            <Route path="/projects" element={<ProjectsSection />} />
-            <Route path="/calculator" element={<CalculatorSection />} />
-            <Route path="/contact" element={<ContactSection />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <AboutSection />
+                  {/* Vision is a tab in AboutSection, so no separate VisionSection */}
+                  <EnergySection />
+                  <BenefitsSection />
+                  <ImpactStats />
+                  <ContactSection />
+                </>
+              }
+            />
+            <Route path="/gallery" element={<GalleryPage />} />
           </Routes>
         </main>
         <Footer />
