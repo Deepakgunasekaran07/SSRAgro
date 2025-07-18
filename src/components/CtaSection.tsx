@@ -53,7 +53,7 @@ const CtaSection: React.FC = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
-            <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 h-full">
+            <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 h-full flex flex-col justify-center">
               <h3 className="text-2xl font-bold mb-6 text-[#0b2b26]">Contact Information</h3>
               
               <div className="space-y-6">
@@ -95,23 +95,6 @@ const CtaSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="mt-12">
-                <h4 className="font-semibold text-lg mb-4">Office Hours</h4>
-                <div className="grid grid-cols-2 gap-4 text-green-700 font-semibold">
-                  <div>
-                    <p className="font-medium">Monday - Friday:</p>
-                    <p>9:00 AM - 6:00 PM</p>
-                  </div>
-                  <div>
-                    <p className="font-medium">Saturday:</p>
-                    <p>10:00 AM - 2:00 PM</p>
-                  </div>
-                  <div>
-                    <p className="font-medium">Sunday:</p>
-                    <p>Closed</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           
@@ -203,18 +186,6 @@ const CtaSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-24 max-w-4xl mx-auto bg-[#0b2b26] rounded-xl overflow-hidden shadow-xl">
-          <div className="p-8 md:p-12 text-center text-white">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to harness the power of the sun?</h3>
-            <p className="text-lg text-green-100 mb-8">
-              Schedule a free consultation with our solar experts and start your journey towards energy independence.
-            </p>
-            <button className="bg-white text-[#0b2b26] hover:bg-[#00cdff] px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-              Get Started Now
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

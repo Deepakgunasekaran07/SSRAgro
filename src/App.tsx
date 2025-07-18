@@ -12,13 +12,7 @@ import Footer from './components/Footer';
 import BenefitsSection from './components/BenefitsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ImpactStats from './components/ServicesSection';
-
-// Placeholder for Gallery/Facility page
-const GalleryPage = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <h1 className="text-4xl font-bold">Gallery / Facility Page (Coming Soon)</h1>
-  </div>
-);
+import GalleryPage from './components/GalleryPage';
 
 function App() {
   return (

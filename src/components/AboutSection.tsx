@@ -111,22 +111,20 @@ const AboutSection: React.FC = () => {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-green-300 text-[#0b2b26] rounded-full text-sm font-medium mb-6">
               <Leaf className="w-4 h-4 mr-2 text-[#f0d003]" />
-              Since 2015
+              Since 2016
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-[#0b2b26] to-green-300 bg-clip-text text-transparent">
               About <span className="text-[#0b2b26]">SSR Agro Energy</span>
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-[#0b2b26] to-green-300 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Pioneering sustainable energy solutions for India's agricultural sector, 
-              <span className="text-[#0b2b26] font-semibold"> transforming farms into powerhouses of clean energy</span>.
+              Pioneering sustainable energy solutions for the future, transforming farms into powerhouses of clean energy.
             </p>
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
             <StatCard icon={<Zap size={24} />} number={8} label="Years of Excellence" suffix="+" />
-            <StatCard icon={<Users size={24} />} number={500} label="Happy Clients" suffix="+" />
             <StatCard icon={<Globe size={24} />} number={2} label="MW Capacity" suffix="" />
             <StatCard icon={<Shield size={24} />} number={100} label="% Clean Energy" suffix="" />
           </div>
@@ -138,15 +136,11 @@ const AboutSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#0b2b26] to-green-300 rounded-2xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105">
                 <img 
-                  src="https://i.ibb.co/L4P0K0N/RASAA-3918.jpg" 
+                  src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1752766216/DSC_3989_ehccaj.jpg" 
                   alt="Solar panels in a farm field" 
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-sm opacity-90">Solar Farm Installation</p>
-                  <p className="text-lg font-semibold">Agricultural Excellence</p>
-                </div>
               </div>
             </div>
 
@@ -197,7 +191,7 @@ const AboutSection: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
-                  In 2016, we embarked on our solar energy journey with a clear and conscious purpose — to produce clean, sustainable power and actively reduce our carbon footprint.
+                  In 2016, we embarked on our solar energy journey with a clear and conscious purpose to produce clean, sustainable power and actively reduce our carbon footprint.
                 </p>
                 <p>
                   As a company deeply connected to the land and resources that support us, we believe it is our responsibility to give back to nature as much as we take.
@@ -211,26 +205,14 @@ const AboutSection: React.FC = () => {
               </div>
               
               <div className="relative">
-                <div className="bg-gradient-to-br from-green-300 to-[#0b2b26] rounded-2xl p-8 text-white">
-                  <h4 className="text-2xl font-bold mb-4">Key Achievements</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <div className="w-3 h-3 bg-[#f0d003] rounded-full mr-3"></div>
-                      <span>Established in 2015</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-3 h-3 bg-[#f0d003] rounded-full mr-3"></div>
-                      <span>2 MW Solar Capacity</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-3 h-3 bg-[#f0d003] rounded-full mr-3"></div>
-                      <span>500+ Successful Projects</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-3 h-3 bg-[#f0d003] rounded-full mr-3"></div>
-                      <span>100% Clean Energy</span>
-                    </div>
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0b2b26] to-green-300 rounded-2xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105">
+                  <img 
+                    src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1752767652/unnamed_4_wmp8u2.png" 
+                    alt="SSR Agro Energy Our Story" 
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
               </div>
             </div>

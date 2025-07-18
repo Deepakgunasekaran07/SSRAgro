@@ -76,63 +76,45 @@ const EnergySection: React.FC = () => {
   ];
 
   return (
-    <section
+      <section
       id="energy"
-      className="py-24 relative"
-      style={{
-        backgroundImage: "url('https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/28/full/1724835314-5004.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        className="py-24 relative"
+        style={{
+          backgroundImage: "url('https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/28/full/1724835314-5004.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
-      }}
-    >
-      <div className="absolute inset-0 bg-gray-900/80 z-0"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+        }}
+      >
+        <div className="absolute inset-0 bg-gray-900/80 z-0"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Our <span className="text-green-300">Clean Energy</span> Commitment
-          </h2>
+            </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#0b2b26] to-green-300 mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-green-300 max-w-3xl mx-auto">
-            Discover how solar energy is shaping a more sustainable, self-reliant future for Indian agriculture.
-          </p>
-        </div>
+              Discover how solar energy is shaping a more sustainable and self-reliant future.
+            </p>
+          </div>
 
-        <div className="space-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {benefits.map((item, idx) => (
-            <div key={idx} className="bg-gradient-to-r from-green-300/20 via-white/10 to-[#f0d003]/20 backdrop-blur-md p-8 rounded-2xl border-2 border-green-300/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-4">
-                <div className="bg-gradient-to-br from-[#f0d003] to-green-300 text-[#0b2b26] w-12 h-12 flex items-center justify-center rounded-full mr-4 shadow-lg">
-                  {item.icon}
+            <div key={idx} className="bg-gradient-to-r from-green-300/20 via-white/10 to-[#f0d003]/20 backdrop-blur-md p-4 rounded-lg border-2 border-green-300/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col justify-between items-center aspect-square min-h-[260px] h-full max-h-full overflow-hidden break-words">
+              <div className="flex flex-col items-center mb-4">
+                <div className="bg-gradient-to-br from-[#f0d003] to-green-300 text-[#0b2b26] w-14 h-14 flex items-center justify-center rounded-full mb-2 shadow-lg">
+                      {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white bg-gradient-to-r from-green-300 to-[#f0d003] bg-clip-text text-transparent">{item.title}</h3>
+                <h3 className="text-lg font-bold text-white bg-gradient-to-r from-green-300 to-[#f0d003] bg-clip-text text-transparent text-center">{item.title}</h3>
               </div>
-              <p className="text-white text-sm md:text-base leading-relaxed">{item.desc}</p>
+              <p className="text-white text-xs md:text-sm leading-relaxed text-center break-words overflow-hidden text-ellipsis">{item.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="bg-gradient-to-br from-green-100 to-[#f0d003]/20 rounded-xl p-6 border-2 border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Counter target={30} suffix="%" duration={2000} />
-            <p className="text-white mt-2 font-bold">Average Energy Cost Reduction</p>
-          </div>
-          <div className="bg-gradient-to-br from-green-100 to-[#f0d003]/20 rounded-xl p-6 border-2 border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Counter target={500} suffix="+" duration={2000} />
-            <p className="text-white mt-2 font-bold">Successful Installations</p>
-          </div>
-          <div className="bg-gradient-to-br from-green-100 to-[#f0d003]/20 rounded-xl p-6 border-2 border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Counter target={25} suffix="k" duration={2000} />
-            <p className="text-white mt-2 font-bold">Tons of CO₂ Prevented</p>
-          </div>
-          <div className="bg-gradient-to-br from-green-100 to-[#f0d003]/20 rounded-xl p-6 border-2 border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Counter target={7} suffix="" duration={2000} />
-            <p className="text-white mt-2 font-bold">Years Average ROI Period</p>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 
-export default EnergySection;
+export default EnergySection; 

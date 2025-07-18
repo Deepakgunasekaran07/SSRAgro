@@ -62,11 +62,11 @@ const HeroSection: React.FC = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <span className="relative inline-block group cursor-pointer">
+            <span className="relative inline-block group cursor-pointer" style={{ color: '#f0d003' }}>
               SSR Agro Energy
               <div
-                className="absolute inset-0 text-accent-yellow blur-sm transition-opacity duration-1000"
-                style={{ opacity: 0.3 + solarIntensity / 300 }}
+                className="absolute inset-0 blur-sm transition-opacity duration-1000"
+                style={{ opacity: 0.3 + solarIntensity / 300, color: '#f0d003' }}
               >
                 SSR Agro Energy
               </div>
@@ -75,25 +75,27 @@ const HeroSection: React.FC = () => {
             <span className="text-white/60 ml-1">®</span>
           </h1>
 
-          <h2 className="text-xl sm:text-2xl mt-6 text-white font-light">
-            Energizing Progress with Clean, Reliable Power Since 2016.
-          </h2>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 mt-6 inline-block border border-white/20 shadow-lg">
+            <h2 className="text-xl sm:text-2xl font-light bg-gradient-to-r from-[#f0d003] to-green-300 bg-clip-text text-transparent font-semibold drop-shadow-lg">
+              Energizing Progress with Clean, Reliable Power Since 2016.
+            </h2>
+          </div>
 
         </div>
 
         {/* Live Solar Data Box */}
-        <div className="absolute bottom-3 right-4 md:right-6 z-20">
-          <div className="bg-primary-green/80 backdrop-blur-sm rounded-full px-6 py-3 flex items-center space-x-4 border border-accent-yellow/30">
+        <div className="absolute bottom-20 right-4 md:right-6 z-20">
+          <div className="bg-primary-green/80 backdrop-blur-sm rounded-full px-7 py-4 flex items-center space-x-5 border border-accent-yellow/30">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-accent-yellow rounded-full animate-pulse" />
-              <span className="text-white text-sm md:text-base font-medium">Live Solar Data</span>
+              <div className="w-2.5 h-2.5 bg-accent-yellow rounded-full animate-pulse" />
+              <span className="text-white text-base md:text-lg font-medium">Live Solar Data</span>
             </div>
-            <div className="w-px h-4 bg-accent-yellow/30" />
-            <div className="text-accent-yellow text-sm font-mono">
+            <div className="w-px h-5 bg-accent-yellow/30" />
+            <div className="text-accent-yellow text-base font-mono">
               {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
             </div>
-            <div className="w-px h-4 bg-accent-yellow/30" />
-            <div className="text-white text-sm font-mono">
+            <div className="w-px h-5 bg-accent-yellow/30" />
+            <div className="text-white text-lg md:text-xl font-semibold font-mono">
               {Math.round(solarIntensity * 12.5)}kWh
             </div>
           </div>

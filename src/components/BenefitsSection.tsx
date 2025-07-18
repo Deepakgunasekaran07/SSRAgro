@@ -80,7 +80,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Leaf size={32} />,
       title: "Clean Energy Contribution",
-      desc: "We commit to generating 100% clean, renewable solar energy — actively reducing reliance on fossil fuels and supporting India’s clean energy targets.",
+      desc: "We commit to generating 100% clean, renewable solar energy actively reducing reliance on fossil fuels and supporting India's clean energy targets.",
     },
     {
       icon: <CloudSun size={32} />,

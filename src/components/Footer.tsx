@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <Logo />
             </div>
             <p className="text-green-100 mb-6">
-              Sustainable solar energy solutions for India's agricultural sector. Helping farms reduce costs and environmental impact since 2015.
+              Sustainable solar energy solutions for helping farms reduce costs and environmental impact since 2016.
             </p>
             <div className="flex space-x-4">
               <SocialLink href="https://facebook.com" icon={<Facebook size={20} />} />
