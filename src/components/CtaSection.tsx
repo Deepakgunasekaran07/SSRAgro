@@ -59,23 +59,11 @@ const CtaSection: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-green-300/20 rounded-full p-3 mr-4 text-[#0b2b26]">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg">Phone</h4>
-                    <p className="text-green-700 font-semibold">+91 98765 43210</p>
-                    <p className="text-green-700 font-semibold">+91 12345 67890</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-green-300/20 rounded-full p-3 mr-4 text-[#0b2b26]">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email</h4>
                     <p className="text-green-700 font-semibold">info@ssragroenergy.com</p>
-                    <p className="text-green-700 font-semibold">support@ssragroenergy.com</p>
                   </div>
                 </div>
                 
@@ -84,13 +72,22 @@ const CtaSection: React.FC = () => {
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">Address</h4>
+                    <h4 className="font-semibold text-lg">Head Office Address</h4>
                     <p className="text-green-700 font-semibold">
-                      123 Green Energy Way,<br />
-                      Sustainable Business Park,<br />
-                      Gurugram, Haryana 122001,<br />
-                      India
+                      #171, 1st floor, MTH road,<br />
+                      Villivakkam, Chennai -600049,<br />
+                      Tamil Nadu, India
                     </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-green-300/20 rounded-full p-3 mr-4 text-[#0b2b26]">
+                    <Phone className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">Phone</h4>
+                    <p className="text-green-700 font-semibold">+91 9986630246</p>
                   </div>
                 </div>
               </div>

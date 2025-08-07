@@ -95,12 +95,80 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <DollarSign size={32} />,
       title: "Community and National Impact",
-      desc: "Through our energy generation, we support the local grid, contribute to national energy security, and play an active role in India’s renewable energy growth story.",
+      desc: "Through our energy generation, we support the local grid, contribute to national energy security, and play an active role in India's renewable energy growth story.",
     },
   ];
 
   return (
-    <></>
+    <section id="gallery" className="py-24 bg-gradient-to-b from-green-50 via-white to-green-100">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#0b2b26]">Gallery</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0b2b26] to-green-300 mx-auto mb-4 rounded-full"></div>
+          <p className="text-lg text-[#0b2b26] max-w-2xl mx-auto mb-8">
+            Explore our solar installations and projects in action.
+          </p>
+          
+          {/* Gallery Grid - Two Images */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-5xl mx-auto">
+            {/* First Image */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-700 hover:scale-105 animate-float">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-300/20 to-[#0b2b26]/20 rounded-2xl animate-pulse"></div>
+              <img 
+                src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1752768642/Screenshot_2025-07-17_at_9.40.20_PM_wibxwo.png" 
+                alt="Solar Farm Overview" 
+                className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-300/10 to-[#f0d003]/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Elements */}
+              <div className="absolute top-4 right-4 w-3 h-3 bg-green-300 rounded-full animate-bounce opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100"></div>
+              <div className="absolute top-8 right-8 w-2 h-2 bg-[#f0d003] rounded-full animate-bounce opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200"></div>
+              
+              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                <p className="text-lg font-semibold animate-slide-in">Solar Farm Overview</p>
+                <p className="text-sm opacity-90 animate-slide-in-delayed">Main installation site</p>
+              </div>
+              
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-green-300/20 to-[#f0d003]/20 blur-xl"></div>
+            </div>
+
+            {/* Second Image */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-700 hover:scale-105 animate-float-delayed">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#f0d003]/20 to-green-300/20 rounded-2xl animate-pulse"></div>
+              <img 
+                src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1752798304/DSC_3991_nft6qn.jpg" 
+                alt="Solar Panel Installation" 
+                className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110 group-hover:-rotate-1"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f0d003]/10 to-green-300/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Elements */}
+              <div className="absolute top-4 left-4 w-3 h-3 bg-[#f0d003] rounded-full animate-bounce opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100"></div>
+              <div className="absolute top-8 left-8 w-2 h-2 bg-green-300 rounded-full animate-bounce opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200"></div>
+              
+              <div className="absolute bottom-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                <p className="text-lg font-semibold animate-slide-in">Solar Panel Installation</p>
+                <p className="text-sm opacity-90 animate-slide-in-delayed">Professional setup</p>
+              </div>
+              
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-[#f0d003]/20 to-green-300/20 blur-xl"></div>
+            </div>
+          </div>
+
+          <button
+            onClick={() => window.location.href = '/gallery'}
+            className="bg-green-300 hover:bg-[#0b2b26] text-[#0b2b26] hover:text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+    </section>
   );
 };
 

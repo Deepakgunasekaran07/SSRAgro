@@ -118,7 +118,7 @@ const AboutSection: React.FC = () => {
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-[#0b2b26] to-green-300 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Pioneering sustainable energy solutions for the future, transforming farms into powerhouses of clean energy.
+              At the core of everything we do is a quiet commitment to clean, reliable solar energy.
             </p>
           </div>
 
