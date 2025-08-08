@@ -6,7 +6,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0b2b26] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 mb-16">
+          {/* Left: Logo and Description */}
           <div>
             <div className="mb-6">
               <Logo />
@@ -22,8 +23,9 @@ const Footer: React.FC = () => {
               <SocialLink href="https://youtube.com" icon={<Youtube size={20} />} />
             </div>
           </div>
-          
-          <div className="flex flex-col items-center md:items-start">
+
+          {/* Middle: Quick Links */}
+          <div className="md:pl-10">
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <FooterLink href="#about">About Us</FooterLink>
@@ -32,35 +34,13 @@ const Footer: React.FC = () => {
               <FooterLink href="#contact">Contact Us</FooterLink>
             </ul>
           </div>
-          
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-lg font-bold mb-6">Newsletter</h3>
-            <p className="text-green-100 mb-4">
-              Subscribe to our newsletter to receive updates on solar technology, incentives, and success stories.
-            </p>
-            <form className="mb-4 w-full">
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  className="bg-green-700 text-white px-4 py-3 rounded-l-lg focus:outline-none w-full"
-                />
-                <button 
-                  type="submit"
-                  className="bg-[#f0d003] hover:bg-green-300 text-[#0b2b26] px-4 py-3 rounded-r-lg transition-colors duration-300"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-            </form>
-            <p className="text-green-200 text-sm">
-              By subscribing you agree to our Privacy Policy.
-            </p>
-          </div>
+
+          {/* Right: Optional (Future Use) */}
+          {/* You can add a third column here if needed */}
         </div>
-        
+
         <div className="border-t border-green-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center text-center">
             <p className="text-green-200 text-sm mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} SSR Agro Energy. All rights reserved.
             </p>
@@ -83,9 +63,9 @@ interface SocialLinkProps {
 
 const SocialLink: React.FC<SocialLinkProps> = ({ href, icon }) => {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
+    <a
+      href={href}
+      target="_blank"
       rel="noopener noreferrer"
       className="bg-green-700 hover:bg-[#f0d003] text-white hover:text-[#0b2b26] w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
     >
@@ -102,8 +82,8 @@ interface FooterLinkProps {
 const FooterLink: React.FC<FooterLinkProps> = ({ href, children }) => {
   return (
     <li>
-      <a 
-        href={href} 
+      <a
+        href={href}
         className="text-green-100 hover:text-[#f0d003] transition-colors duration-300 flex items-center"
       >
         <ChevronRight size={16} className="mr-2" />

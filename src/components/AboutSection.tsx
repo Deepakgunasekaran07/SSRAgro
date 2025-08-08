@@ -136,7 +136,7 @@ const AboutSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#0b2b26] to-green-300 rounded-2xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105">
                 <img 
-                  src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1752766216/DSC_3989_ehccaj.jpg" 
+                  src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1754582758/WhatsApp_Image_2025-08-06_at_11.09.21_AM_pgdryt.jpg" 
                   alt="Solar panels in a farm field" 
                   className="w-full h-[500px] object-cover"
                 />
@@ -208,7 +208,7 @@ const AboutSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0b2b26] to-green-300 rounded-2xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105">
                   <img 
-                    src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1752767652/unnamed_4_wmp8u2.png" 
+                    src="https://res.cloudinary.com/dlfitvhc0/image/upload/v1754582795/WhatsApp_Image_2025-08-06_at_11.09.22_AM_usqzft.jpg" 
                     alt="SSR Agro Energy Our Story" 
                     className="w-full h-[400px] object-cover"
                   />
